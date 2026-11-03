@@ -1,0 +1,13 @@
+.tools/
+.gradle/
+**/build/
+local.properties
+*.yaml
+*.yml
+*.jks
+*.keystore
+private/
+artifacts/
+app/src/main/jniLibs/
+*.apk
+*.aab
