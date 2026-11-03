@@ -27,7 +27,7 @@ public final class MainActivity extends Activity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         LinearLayout root=new LinearLayout(this);root.setOrientation(1);root.setPadding(dp(20),dp(24),dp(20),dp(12));root.setBackgroundColor(Color.WHITE);
         root.setOnApplyWindowInsetsListener((v,insets)->{v.setPadding(dp(20),dp(24)+insets.getSystemWindowInsetTop(),dp(20),dp(12)+insets.getSystemWindowInsetBottom());return insets;});
-        TextView title=new TextView(this);title.setText("简连");title.setTextSize(30);title.setTextColor(Color.rgb(24,36,44));root.addView(title);
+        TextView title=new TextView(this);title.setText(getString(R.string.app_name));title.setTextSize(30);title.setTextColor(Color.rgb(24,36,44));root.addView(title);
         TextView subtitle=new TextView(this);subtitle.setText("全局代理 · 全部节点");subtitle.setTextSize(14);subtitle.setPadding(0,dp(6),0,dp(12));root.addView(subtitle);
         status=new TextView(this);status.setTextSize(15);root.addView(status);
         connect=new Button(this);connect.setText("连接");connect.setOnClickListener(v->toggle());root.addView(connect,new LinearLayout.LayoutParams(-1,dp(54)));

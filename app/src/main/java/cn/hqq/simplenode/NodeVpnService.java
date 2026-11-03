@@ -27,7 +27,7 @@ public final class NodeVpnService extends VpnService {
         Intent show=new Intent(this,MainActivity.class);
         PendingIntent pi=PendingIntent.getActivity(this,0,show,PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
         PendingIntent stopPi=PendingIntent.getService(this,1,new Intent(this,NodeVpnService.class).setAction("STOP"),PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
-        Notification note=new Notification.Builder(this,"vpn").setContentTitle("简连 · 全局代理")
+        Notification note=new Notification.Builder(this,"vpn").setContentTitle(getString(R.string.app_name)+" · 全局代理")
             .setContentText("点击查看节点和连接状态").setSmallIcon(android.R.drawable.stat_sys_upload_done)
             .setContentIntent(pi).setOngoing(true).addAction(new Notification.Action.Builder(null,"断开",stopPi).build()).build();
         startForeground(1,note);starting=true;message="正在连接…";changed();
@@ -36,7 +36,7 @@ public final class NodeVpnService extends VpnService {
                 Core.ensure(this);if(stopRequested)return;
                 String selected=getSharedPreferences("state",0).getString("selected",null);
                 if(selected==null||!Core.select(selected))throw new Exception();
-                ParcelFileDescriptor next=new Builder().setSession("简连 · 全局代理").setMtu(1500)
+                ParcelFileDescriptor next=new Builder().setSession(getString(R.string.app_name)+" · 全局代理").setMtu(1500)
                     .addAddress("172.19.0.1",30).addAddress("fdfe:dcba:9876::1",126)
                     .addDnsServer("198.18.0.2").addRoute("0.0.0.0",0).addRoute("::",0)
                     .addDisallowedApplication(getPackageName()).setBlocking(false).setMetered(false).establish();
