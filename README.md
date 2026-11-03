@@ -21,7 +21,7 @@
 
 ## 安装
 
-1. 从 [Releases](https://github.com/Henry2012/simple-node-vpn/releases) 下载适用于 arm64 的 APK。
+1. 从 [Releases](https://github.com/Henry2012/HopLink/releases) 下载适用于 arm64 的 APK。
 2. 在 Android 10 或更新版本的手机上安装 APK。
 3. 启动跃连，点击 **导入配置**，选择包含 `proxies` 节点列表的 Clash YAML 文件。
 4. 等待测速完成，或手动选择一个节点。

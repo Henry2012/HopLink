@@ -21,7 +21,7 @@ The screenshot hides node names, connection status, and the phone's status bar.
 
 ## Installation
 
-1. Download the arm64 APK from [Releases](https://github.com/Henry2012/simple-node-vpn/releases).
+1. Download the arm64 APK from [Releases](https://github.com/Henry2012/HopLink/releases).
 2. Install the APK on a phone running Android 10 or later.
 3. Open HopLink. Tap **导入配置** (Import configuration), then choose a Clash YAML file containing a `proxies` list.
 4. Wait for the test to finish, or select a node manually.
