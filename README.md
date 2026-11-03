@@ -11,6 +11,12 @@
 - **手机独立运行**：使用手机的 Wi-Fi 或移动数据，不需要电脑、ADB 或其他代理 App 保持连接。
 - **配置保存在本机**：导入的配置保存在应用私有目录，不会打包进 APK，也不会上传到转换服务。
 
+## 界面
+
+<img src="docs/images/screenshot-redacted.png" alt="简连的连接控制与节点列表" width="320">
+
+截图已遮挡节点名称和手机状态栏。
+
 ## 安装
 
 1. 从 [Releases](https://github.com/Henry2012/simple-node-vpn/releases) 下载适用于 arm64 的 APK。
